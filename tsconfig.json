@@ -7,7 +7,11 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
+<<<<<<< HEAD
     "moduleResolution": "node",
+=======
+    "moduleResolution": "bundler",
+>>>>>>> b56af5f66f0213640a044a48cbeec3d130b7dc0c
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
