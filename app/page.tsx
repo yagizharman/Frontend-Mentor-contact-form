@@ -69,7 +69,7 @@ export default function Home() {
       ),
       description: (
         <div className="text-white text-xs">
-          Thanks for completing the form. We'll be in touch soon!'
+          Thanks for completing the form. We&apos;ll be in touch soon!
         </div>
       ),
       //Delete the toast after 5 seconds
