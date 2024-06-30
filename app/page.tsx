@@ -61,19 +61,20 @@ export default function Home() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     toast({
-      title: (
-        <div className="flex flex-row  items-center ">
-          <FaRegCheckCircle className="text-white" />
-          <span className="ml-2 text-white">Message Sent!</span>
+      action: (
+        <div className="">
+          <div className="flex flex-row  items-center mb-1 ">
+            <FaRegCheckCircle className="text-white" />
+            <span className="ml-2 text-white text-sm">Message Sent!</span>
+          </div>
+          <div className="text-texts-color2 text-xs ">
+            Thanks for completing the form. We&apos;ll be in touch soon!
+          </div>
         </div>
       ),
-      description: (
-        <div className="text-white text-xs">
-          Thanks for completing the form. We&apos;ll be in touch soon!
-        </div>
-      ),
+
       //Delete the toast after 5 seconds
-      duration: 5000,
+      duration: 1000000,
     });
   }
 
@@ -170,13 +171,14 @@ export default function Home() {
                       <RadioGroup
                         defaultValue={QueryType.Empty}
                         onValueChange={field.onChange}
+                        className="outline-none focus:outline-none"
                       >
-                        <div className=" flex flex-col gap-y-3 lg:flex-row lg:gap-x-3 justify-between  cursor-pointer">
+                        <div className=" flex flex-col outline-none focus:outline-none gap-y-3 lg:flex-row lg:gap-x-3 justify-between  cursor-pointer">
                           <div
                             className={`
                             flex items-center space-x-2 
                             p-2  w-full text-sm
-                           bg-opacity-10 border-1 border-texts-color2  h-10  rounded-lg
+                           bg-opacity-10 border-1 border-texts-color2 outline-none focus:outline-none  h-10  rounded-lg
                             ${
                               field.value === QueryType.General
                                 ? "bg-button-prim border-18 border-button-prim"
@@ -188,7 +190,7 @@ export default function Home() {
                               value={QueryType.General}
                               id="op1"
                               className={`
-                              col font-normal
+                              col font-normal  outline-none focus:outline-none
                              
                               `}
                             />
@@ -203,7 +205,7 @@ export default function Home() {
                             className={`
                             flex items-center space-x-2 
                             p-2  w-full text-sm
-                           bg-opacity-10 border-1 border-texts-color2  h-10  rounded-lg
+                           bg-opacity-10 border-1 outline-none focus:outline-none border-texts-color2  h-10  rounded-lg
                             ${
                               field.value === QueryType.Support
                                 ? "bg-button-prim  border-button-prim border-18"
@@ -212,11 +214,12 @@ export default function Home() {
                             `}
                           >
                             <RadioGroupItem
+                              className="outline-none focus:outline-none"
                               value={QueryType.Support}
                               id="op2"
                             />
                             <Label
-                              className="font-normal text-texts-color"
+                              className="font-normal  text-texts-color"
                               htmlFor="op2"
                             >
                               Support Request
